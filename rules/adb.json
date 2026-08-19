@@ -1,0 +1,30 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "adb",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "list",
+    "operand": "list",
+    "sensitive": false,
+    "list": [
+      {
+        "type": "simple",
+        "operand": "process.path",
+        "sensitive": false,
+        "data": "/usr/lib/android-sdk/platform-tools/adb",
+        "list": null
+      },
+      {
+        "type": "simple",
+        "operand": "dest.ip",
+        "sensitive": false,
+        "data": "127.0.0.1",
+        "list": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "codium-deny",
+  "enabled": true,
+  "precedence": false,
+  "action": "deny",
+  "duration": "always",
+  "operator": {
+    "type": "list",
+    "operand": "list",
+    "sensitive": false,
+    "list": [
+      {
+        "type": "simple",
+        "operand": "process.path",
+        "sensitive": false,
+        "data": "/usr/share/codium/codium",
+        "list": null
+      },
+      {
+        "type": "lists",
+        "operand": "lists.domains",
+        "sensitive": false,
+        "data": "/etc/opensnitchd/lists/codium-deny",
+        "list": null
+      }
+    ]
+  }
+}

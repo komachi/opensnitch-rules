@@ -1,0 +1,18 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "connmand",
+  "description": "",
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "operand": "process.path",
+    "data": "/usr/sbin/connmand",
+    "type": "simple",
+    "list": [],
+    "sensitive": false
+  },
+  "enabled": true,
+  "precedence": false,
+  "nolog": false
+}

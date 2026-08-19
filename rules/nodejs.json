@@ -1,0 +1,33 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "nodejs",
+  "description": "",
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "operand": "list",
+    "data": "",
+    "type": "list",
+    "list": [
+      {
+        "type": "lists",
+        "operand": "lists.domains",
+        "sensitive": false,
+        "data": "/etc/opensnitchd/lists/npm",
+        "list": null
+      },
+      {
+        "operand": "process.path",
+        "data": "/usr/bin/node",
+        "type": "simple",
+        "list": null,
+        "sensitive": false
+      }
+    ],
+    "sensitive": false
+  },
+  "enabled": true,
+  "precedence": false,
+  "nolog": false
+}

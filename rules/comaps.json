@@ -1,0 +1,33 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "comaps",
+  "description": "",
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "operand": "list",
+    "data": "",
+    "type": "list",
+    "list": [
+      {
+        "operand": "dest.host",
+        "data": "^(|.*\\.)comaps\\.app$",
+        "type": "regexp",
+        "list": null,
+        "sensitive": false
+      },
+      {
+        "operand": "process.path",
+        "data": "/app/bin/CoMaps",
+        "type": "simple",
+        "list": null,
+        "sensitive": false
+      }
+    ],
+    "sensitive": false
+  },
+  "enabled": true,
+  "precedence": false,
+  "nolog": false
+}

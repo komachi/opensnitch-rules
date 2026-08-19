@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenSnitch Rule",
+  "description": "Schema for OpenSnitch rule files.",
+  "type": "object",
+  "required": [
+    "created",
+    "updated",
+    "name",
+    "enabled",
+    "precedence",
+    "action",
+    "duration",
+    "operator"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC date and time of creation."
+    },
+    "updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC date and time of the last update."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255,
+      "description": "The name of the rule."
+    },
+    "description": {
+      "type": "string",
+      "description": "Free-text annotation field, optional, daemon ignores it."
+    },
+    "enabled": {
+      "type": "boolean",
+      "description": "Enable or disable the rule."
+    },
+    "precedence": {
+      "type": "boolean",
+      "description": "Sets if a rule take precedence over the rest (>= v1.2.0). If a connection matches this rule, no other rules will be evaluated."
+    },
+    "nolog": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether matching connections should be excluded from logging."
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "allow",
+        "deny",
+        "reject"
+      ],
+      "description": "Action to take when the rule matches. Reject kills the socket, terminating the connection immediately. deny drops/ignores the packet."
+    },
+    "duration": {
+      "type": "string",
+      "description": "The duration of the rule in Duration https://pkg.go.dev/time#ParseDuration format. always is always used when the rule is written to disk. The rest of the options are temporary, until they reach the deadline: 12h, 5h, 1h, 30s, or once to only run the rule one time."
+    },
+    "operator": {
+      "$ref": "#/$definitions/operator"
+    }
+  },
+  "$definitions": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "simple",
+        "regexp",
+        "network",
+        "lists",
+        "list",
+        "range"
+      ]
+    },
+    "operand": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "list",
+            "process.path",
+            "process.id",
+            "process.command",
+            "process.parent.path",
+            "process.hash.md5",
+            "process.hash.sha1",
+            "user.id",
+            "user.name",
+            "protocol",
+            "source.port",
+            "source.ip",
+            "source.network",
+            "dest.ip",
+            "dest.host",
+            "dest.network",
+            "dest.port",
+            "iface.in",
+            "iface.out",
+            "lists.domains",
+            "lists.domains_regexp",
+            "lists.ips",
+            "lists.nets",
+            "lists.hash.md5"
+          ]
+        },
+        {
+          "type": "string",
+          "pattern": "^process\\.env\\.[A-Za-z_][A-Za-z0-9_]*$",
+          "description": "Use the value of an environment variable of the process given its name."
+        },
+        {
+          "const": true,
+          "description": "Always-match operand."
+        }
+      ]
+    },
+    "operator": {
+      "type": "object",
+      "description": "Condition used to match a connection.",
+      "required": [
+        "type",
+        "operand"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "$ref": "#/$definitions/type"
+        },
+        "operand": {
+          "$ref": "#/$definitions/operand"
+        },
+        "data": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Value to compare against, or a directory path for lists.* operands."
+        },
+        "sensitive": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether matching is case-sensitive."
+        },
+        "list": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Nested operators used by the list operator.",
+          "items": {
+            "$ref": "#/$definitions/operator"
+          }
+        }
+      },
+      "data": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "00-deny-tmp",
+  "enabled": true,
+  "precedence": true,
+  "action": "reject",
+  "duration": "always",
+  "operator": {
+    "type": "regexp",
+    "operand": "process.path",
+    "sensitive": false,
+    "data": "^(/var/tmp|/dev|/memfd|/tmp).*",
+    "list": null
+  }
+}

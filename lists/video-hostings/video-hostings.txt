@@ -1,0 +1,4 @@
+0.0.0.0 archive.org
+0.0.0.0 av.archive.org
+0.0.0.0 googlevideo.com
+0.0.0.0 youtube.com

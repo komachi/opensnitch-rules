@@ -1,0 +1,2 @@
+0.0.0.0 files.pythonhosted.org
+0.0.0.0 pypi.org

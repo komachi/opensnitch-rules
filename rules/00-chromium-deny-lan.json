@@ -1,0 +1,30 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "chromium-deny-lan",
+  "enabled": true,
+  "precedence": true,
+  "action": "deny",
+  "duration": "always",
+  "operator": {
+    "type": "list",
+    "operand": "list",
+    "sensitive": false,
+    "list": [
+      {
+        "type": "simple",
+        "operand": "process.path",
+        "sensitive": false,
+        "data": "/usr/lib/chromium/chrome",
+        "list": null
+      },
+      {
+        "type": "simple",
+        "operand": "dest.network",
+        "sensitive": false,
+        "data": "LAN",
+        "list": null
+      }
+    ]
+  }
+}

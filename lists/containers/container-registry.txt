@@ -1,0 +1,5 @@
+0.0.0.0 docker.com
+0.0.0.0 docker.io
+0.0.0.0 ghcr.io
+0.0.0.0 lscr.io
+0.0.0.0 pkg-containers.githubusercontent.com

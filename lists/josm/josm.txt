@@ -1,0 +1,17 @@
+0.0.0.0 clarity.maptiles.arcgis.com
+0.0.0.0 dev.virtualearth.net
+0.0.0.0 gokaart.gitlab.io
+0.0.0.0 grab.community.improve-osm.org
+0.0.0.0 josm.openstreetmap.de
+0.0.0.0 mapwith.ai
+0.0.0.0 offsets.textual.ru
+0.0.0.0 openstreetmap.org
+0.0.0.0 server.arcgisonline.com
+0.0.0.0 services.arcgisonline.com
+0.0.0.0 services.digitalglobe.com
+0.0.0.0 tiles.mapbox.com
+0.0.0.0 tiles.openaerialmap.org
+0.0.0.0 tiles.virtualearth.net
+0.0.0.0 tiles.wmflabs.org
+0.0.0.0 upload.wikimedia.org
+0.0.0.0 wayback.maptiles.arcgis.com

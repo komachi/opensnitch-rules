@@ -1,0 +1,33 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "cargo",
+  "description": "",
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "operand": "list",
+    "data": "",
+    "type": "list",
+    "list": [
+      {
+        "type": "lists",
+        "operand": "lists.domains",
+        "data": "/etc/opensnitchd/lists/crates",
+        "list": null,
+        "sensitive": false
+      },
+      {
+        "operand": "process.path",
+        "data": "/usr/bin/cargo",
+        "type": "simple",
+        "list": null,
+        "sensitive": false
+      }
+    ],
+    "sensitive": false
+  },
+  "enabled": true,
+  "precedence": false,
+  "nolog": false
+}

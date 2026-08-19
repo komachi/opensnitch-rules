@@ -1,0 +1,33 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "flatpak-portal",
+  "description": "",
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "operand": "list",
+    "data": "",
+    "type": "list",
+    "list": [
+      {
+        "operand": "dest.host",
+        "data": "dl.flathub.org",
+        "type": "simple",
+        "list": null,
+        "sensitive": false
+      },
+      {
+        "operand": "process.path",
+        "data": "/usr/libexec/flatpak-portal",
+        "type": "simple",
+        "list": null,
+        "sensitive": false
+      }
+    ],
+    "sensitive": false
+  },
+  "enabled": true,
+  "precedence": false,
+  "nolog": false
+}

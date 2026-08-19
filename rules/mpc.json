@@ -1,0 +1,40 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "mpc",
+  "description": "",
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "operand": "list",
+    "data": "",
+    "type": "list",
+    "list": [
+      {
+        "type": "network",
+        "operand": "dest.network",
+        "sensitive": false,
+        "data": "LAN",
+        "list": null
+      },
+      {
+        "operand": "dest.port",
+        "data": "6600",
+        "type": "simple",
+        "list": null,
+        "sensitive": false
+      },
+      {
+        "operand": "process.path",
+        "data": "/usr/bin/mpc",
+        "type": "simple",
+        "list": null,
+        "sensitive": false
+      }
+    ],
+    "sensitive": false
+  },
+  "enabled": true,
+  "precedence": false,
+  "nolog": false
+}

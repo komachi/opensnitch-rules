@@ -1,0 +1,6 @@
+0.0.0.0 open-vsx.org
+0.0.0.0 openvsx.eclipsecontent.org
+0.0.0.0 openvsxorg.blob.core.windows.net
+0.0.0.0 www.schemastore.org
+0.0.0.0 json.schemastore.org
+0.0.0.0 gitlab.com

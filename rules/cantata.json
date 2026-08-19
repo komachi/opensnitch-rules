@@ -1,0 +1,39 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "cantata",
+  "description": "",
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "operand": "list",
+    "type": "list",
+    "list": [
+      {
+        "operand": "dest.network",
+        "data": "LAN",
+        "type": "simple",
+        "list": null,
+        "sensitive": false
+      },
+      {
+        "operand": "dest.port",
+        "data": "6600",
+        "type": "simple",
+        "list": null,
+        "sensitive": false
+      },
+      {
+        "operand": "process.path",
+        "data": "/usr/bin/cantata",
+        "type": "simple",
+        "list": null,
+        "sensitive": false
+      }
+    ],
+    "sensitive": false
+  },
+  "enabled": true,
+  "precedence": false,
+  "nolog": false
+}

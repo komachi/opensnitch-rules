@@ -1,0 +1,37 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "electron-cash",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "list",
+    "operand": "list",
+    "sensitive": false,
+    "list": [
+      {
+        "type": "regexp",
+        "operand": "process.command",
+        "sensitive": false,
+        "data": "/tmp/\\.mount_electr.*/usr/bin/python3.* -s /tmp/\\.mount_electr.*/usr/bin/electron-cash",
+        "list": null
+      },
+      {
+        "type": "simple",
+        "operand": "dest.port",
+        "sensitive": false,
+        "data": "9050",
+        "list": null
+      },
+      {
+        "operand": "dest.ip",
+        "data": "127.0.0.1",
+        "type": "simple",
+        "list": null,
+        "sensitive": false
+      }
+    ]
+  }
+}

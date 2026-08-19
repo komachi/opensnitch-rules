@@ -1,0 +1,40 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "torbrowser-launcher",
+  "description": "",
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "operand": "list",
+    "data": "",
+    "type": "list",
+    "list": [
+      {
+        "operand": "dest.ip",
+        "data": "127.0.0.1",
+        "type": "simple",
+        "list": null,
+        "sensitive": false
+      },
+      {
+        "operand": "dest.port",
+        "data": "9050",
+        "type": "regexp",
+        "list": null,
+        "sensitive": false
+      },
+      {
+        "operand": "process.command",
+        "data": "/usr/bin/python3 /usr/bin/torbrowser-launcher",
+        "type": "simple",
+        "list": null,
+        "sensitive": false
+      }
+    ],
+    "sensitive": false
+  },
+  "enabled": true,
+  "precedence": false,
+  "nolog": false
+}

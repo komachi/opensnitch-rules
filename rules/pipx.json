@@ -1,0 +1,30 @@
+{
+  "created": "1970-01-01T12:00:00Z",
+  "updated": "1970-01-01T12:00:00Z",
+  "name": "pipx",
+  "enabled": true,
+  "precedence": false,
+  "action": "allow",
+  "duration": "always",
+  "operator": {
+    "type": "list",
+    "operand": "list",
+    "sensitive": false,
+    "list": [
+      {
+        "type": "regexp",
+        "operand": "process.command",
+        "sensitive": false,
+        "data": "^$HOME/\\.local/pipx/venvs/.*/bin/python -m pip install .* ",
+        "list": null
+      },
+      {
+        "type": "lists",
+        "operand": "lists.domains",
+        "sensitive": false,
+        "data": "/etc/opensnitchd/lists/pypi",
+        "list": null
+      }
+    ]
+  }
+}
