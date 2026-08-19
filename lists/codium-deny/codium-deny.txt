@@ -18,6 +18,7 @@
 0.0.0.0 camo.githubusecontent.com
 0.0.0.0 user-images.githubusercontent.com
 0.0.0.0 kilo.ai
+0.0.0.0 api.kilo.ai
 0.0.0.0 cloudflareinsights.com
 0.0.0.0 youtube.com
 0.0.0.0 avatars.githubusercontent.com

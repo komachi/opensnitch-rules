@@ -10,11 +10,11 @@
     "type": "list",
     "list": [
       {
-        "operand": "dest.network",
-        "data": "LAN",
-        "type": "simple",
-        "list": null,
-        "sensitive": false
+        "type": "lists",
+        "operand": "lists.nets",
+        "sensitive": false,
+        "data": "/etc/opensnitchd/lists/localhost",
+        "list": null
       },
       {
         "operand": "dest.port",

@@ -11,11 +11,11 @@
     "type": "list",
     "list": [
       {
-        "operand": "dest.host",
-        "data": "^(|.*\\.)debian\\.pool\\.ntp\\.org$",
-        "type": "regexp",
-        "list": null,
-        "sensitive": false
+        "type": "simple",
+        "operand": "dest.port",
+        "sensitive": false,
+        "data": "123",
+        "list": null
       },
       {
         "operand": "process.path",

@@ -11,6 +11,6 @@
     "operand": "process.path",
     "sensitive": false,
     "data": "/usr/lib/firefox-esr/firefox-esr",
-    "list": null
+    "list": []
   }
 }

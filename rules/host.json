@@ -7,10 +7,32 @@
   "action": "allow",
   "duration": "always",
   "operator": {
-    "type": "simple",
-    "operand": "process.path",
+    "type": "list",
+    "operand": "list",
     "sensitive": false,
-    "data": "/usr/bin/host",
-    "list": null
+    "list": [
+      {
+        "type": "simple",
+        "operand": "process.path",
+        "sensitive": false,
+        "data": "/usr/bin/host",
+        "list": null
+      },
+      {
+        "type": "simple",
+        "operand": "dest.port",
+        "sensitive": false,
+        "data": "53",
+        "list": null
+      },
+      {
+        "type": "lists",
+        "operand": "lists.nets",
+        "sensitive": false,
+        "data": "/etc/opensnitchd/lists/localhost",
+        "list": null
+      }
+    ]
   }
+
 }

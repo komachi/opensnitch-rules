@@ -14,7 +14,7 @@
         "type": "simple",
         "operand": "process.path",
         "sensitive": false,
-        "data": "/usr/lib/chromium/chrome",
+        "data": "/usr/lib/chromium/chromium",
         "list": null
       },
       {

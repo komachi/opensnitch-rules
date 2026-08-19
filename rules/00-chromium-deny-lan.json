@@ -15,14 +15,14 @@
         "type": "simple",
         "operand": "process.path",
         "sensitive": false,
-        "data": "/usr/lib/chromium/chrome",
+        "data": "/usr/lib/chromium/chromium",
         "list": null
       },
       {
-        "type": "simple",
-        "operand": "dest.network",
+        "type": "lists",
+        "operand": "lists.nets",
         "sensitive": false,
-        "data": "LAN",
+        "data": "/etc/opensnitchd/lists/lan",
         "list": null
       }
     ]

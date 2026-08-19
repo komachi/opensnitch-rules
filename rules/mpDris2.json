@@ -26,10 +26,10 @@
         "list": null
       },
       {
-        "type": "network",
-        "operand": "dest.network",
+        "type": "lists",
+        "operand": "lists.nets",
         "sensitive": false,
-        "data": "LAN",
+        "data": "/etc/opensnitchd/lists/localhost",
         "list": null
       }
     ]
