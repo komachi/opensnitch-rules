@@ -1,13 +1,13 @@
 {
   "created": "1970-01-01T12:00:00Z",
   "updated": "1970-01-01T12:00:00Z",
-  "name": "torbrowser-tor",
+  "name": "ipfs",
   "description": "",
   "action": "allow",
   "duration": "always",
   "operator": {
     "operand": "process.path",
-    "data": "$HOME/.local/share/torbrowser/tbb/x86_64/tor-browser/Browser/TorBrowser/Tor/tor",
+    "data": "/usr/local/bin/ipfs",
     "type": "simple",
     "list": null,
     "sensitive": false

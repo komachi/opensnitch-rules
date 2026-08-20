@@ -1,7 +1,7 @@
 {
   "created": "1970-01-01T12:00:00Z",
   "updated": "1970-01-01T12:00:00Z",
-  "name": "torbrowser",
+  "name": "extrepo",
   "description": "",
   "action": "allow",
   "duration": "always",
@@ -11,23 +11,16 @@
     "type": "list",
     "list": [
       {
-        "operand": "dest.ip",
-        "data": "127.0.0.1",
+        "operand": "dest.host",
+        "data": "extrepo-team.pages.debian.net",
         "type": "simple",
         "list": null,
         "sensitive": false
       },
       {
-        "operand": "dest.port",
-        "data": "9151|9150|9050",
+        "operand": "process.command",
+        "data": "/usr/bin/perl -w /usr/bin/extrepo .*",
         "type": "regexp",
-        "list": null,
-        "sensitive": false
-      },
-      {
-        "operand": "process.path",
-        "data": "$HOME/.local/share/torbrowser/tbb/x86_64/tor-browser/Browser/firefox.real",
-        "type": "simple",
         "list": null,
         "sensitive": false
       }

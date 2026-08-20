@@ -6,26 +6,11 @@
   "action": "deny",
   "duration": "always",
   "operator": {
-    "operand": "list",
-    "data": "",
-    "type": "list",
-    "list": [
-      {
-        "operand": "dest.host",
-        "data": "api\\.kilo\\.ai|cloudflare\\.com|models\\.dev|registry\\.npmjs\\.org",
-        "type": "regexp",
-        "list": null,
-        "sensitive": false
-      },
-      {
-        "operand": "process.path",
-        "data": "$HOME/\\.vscode-oss/extensions/kilocode\\.kilo-code-[0-9.]+-linux-x64/bin/kilo",
-        "type": "regexp",
-        "list": null,
-        "sensitive": false
-      }
-    ],
-    "sensitive": false
+    "sensitive": false,
+    "operand": "process.path",
+    "data": "$HOME/\\.vscode-oss/extensions/kilocode\\.kilo-code-[0-9.]+-linux-x64/bin/kilo",
+    "type": "regexp",
+    "list": null
   },
   "enabled": true,
   "precedence": false,
